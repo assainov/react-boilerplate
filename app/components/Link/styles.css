@@ -1,0 +1,35 @@
+.link { /* stylelint-disable */
+    background-color: #fff;
+    display: flex;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.118), 0 1px 4px rgba(0, 0, 0, 0.118);
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.votingContainer {
+    padding: 1.5rem;
+}
+
+.votingCount {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.detailsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+    font-size: 1.6rem;
+}
+
+.description {
+    color: #757575;
+}
+
+.votingIcon {
+    font-size: 4rem;
+}
