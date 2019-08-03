@@ -1,7 +1,8 @@
 import { call, put } from 'redux-saga/effects';
 import { takeLatest } from 'redux-saga';
+import { push } from 'react-router-redux';
 import { requestLinksSuccess, requestLinksFailure } from './actions';
-import { REQUEST_LINKS } from './constants';
+import { REQUEST_LINKS, START_ADD } from './constants';
 
 function fetchLinksFromServer(topicName) {
   return fetch(`/api/topics/${topicName}/links`).then(response => response.json());
@@ -20,7 +21,16 @@ export function* fetchLinksSaga() {
   yield* takeLatest(REQUEST_LINKS, fetchLinks);
 }
 
+function* startAdd(action) {
+  yield put(push(`/topics/${action.topicName}/add`));
+}
+
+export function* startAddSaga() {
+  yield* takeLatest(START_ADD, startAdd);
+}
+
 // All sagas to be loaded
 export default [
   fetchLinksSaga,
+  startAddSaga,
 ];

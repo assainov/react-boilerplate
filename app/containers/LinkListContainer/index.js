@@ -8,12 +8,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import selectLinkListContainer from './selectors';
 import LinkList from '../../components/LinkList';
-import { requestLinks } from './actions';
+import { requestLinks, startAdd } from './actions';
 
 export class LinkListContainer extends React.Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
     topicName: React.PropTypes.string.isRequired,
     requestLinks: React.PropTypes.func.isRequired,
+    startAdd: React.PropTypes.func.isRequired,
   }
 
   componentDidMount() {
@@ -38,6 +39,7 @@ const mapStateToProps = selectLinkListContainer();
 function mapDispatchToProps(dispatch) {
   return {
     requestLinks: (topicName) => dispatch(requestLinks(topicName)),
+    startAdd: (topicName) => dispatch(startAdd(topicName)),
   };
 }
 
