@@ -7,18 +7,18 @@
     margin-top: 2rem;
 }
 
-.votingContainer {
+.voting-container {
     padding: 1.5rem;
 }
 
-.votingCount {
+.voting-count {
     font-size: 2rem;
     text-align: center;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
 }
 
-.detailsContainer {
+.details-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,6 +30,14 @@
     color: #757575;
 }
 
-.votingIcon {
+.voting-icon {
     font-size: 4rem;
+}
+
+.link-anchor {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        text-decoration: underline;
+    }
 }
