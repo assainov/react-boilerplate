@@ -51,15 +51,15 @@ export default function createRoutes(store) {
               System.import('containers/LinkListContainer/sagas'),
               System.import('containers/LinkListContainer'),
             ]);
-    
+
             const renderRoute = loadModule(cb);
-    
+
             importModules.then(([reducer, sagas, component]) => {
               injectReducer('linkListContainer', reducer.default);
               injectSagas('linkListContainer', sagas.default);
               renderRoute(component);
             });
-    
+
             importModules.catch(errorLoading);
           },
         },
