@@ -1,0 +1,53 @@
+.link-form { /* stylelint-disable */
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #fff;
+    width: 32rem;
+    padding: 2.5rem;
+    border-radius: 2px;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow-x: hidden;
+}
+
+.heading {
+    color: #222;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.action-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2.5rem;
+}
+
+.button {
+    text-transform: uppercase;
+    padding: 1rem;
+    border-radius: 2;
+    cursor: pointer;
+    color: #00AFCC;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+}
+
+.input {
+    margin: 1rem 0;
+}

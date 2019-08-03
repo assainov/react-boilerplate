@@ -1,0 +1,23 @@
+.input { /* stylelint-disable */
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+
+    &:focus {
+        outline: none;
+        border-bottom-color: #00AFCC;
+        border-bottom-width: 2px;
+    }
+}
+
+.error-message {
+    color: #CE1313;
+    padding: 1rem 0;
+    font-size: 1.4rem;
+}
+
+.input-error {
+    border-bottom-color: #CE1313;
+}
