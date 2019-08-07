@@ -1,4 +1,4 @@
-# React Link Dashboard
+# Useful Link Manager
 
 An app to store useful links from the internet
 
