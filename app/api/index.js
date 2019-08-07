@@ -8,3 +8,7 @@ export function createLink({ topicName, url, description }) {
     body: JSON.stringify({ url, description, topicName }),
   }).then(response => response.json());
 }
+
+export function fetchLinksFromServer(topicName) {
+  return fetch(`/api/topics/${topicName}/links`).then(response => response.json());
+}

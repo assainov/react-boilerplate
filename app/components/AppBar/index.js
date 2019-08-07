@@ -21,7 +21,7 @@ function AppBar({ toggleDrawer, email }) {
         onClick={toggleDrawer}
       />
       <div className={styles.heading}>
-        Coder Daily
+        Useful Link Manager
       </div>
       <div className={styles.linkContainer}>
         { loginLink }

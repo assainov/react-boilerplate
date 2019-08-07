@@ -3,10 +3,7 @@ import { takeLatest } from 'redux-saga';
 import { push } from 'react-router-redux';
 import { requestLinksSuccess, requestLinksFailure } from './actions';
 import { REQUEST_LINKS, START_ADD } from './constants';
-
-function fetchLinksFromServer(topicName) {
-  return fetch(`/api/topics/${topicName}/links`).then(response => response.json());
-}
+import { fetchLinksFromServer } from '../../api';
 
 function* fetchLinks(action) {
   try {
