@@ -1,3 +1,8 @@
+export function fetchTopicsFromServer() {
+  return fetch('/api/topics')
+    .then(result => result.json());
+}
+
 export function createLink({ topicName, url, description }) {
   return fetch(`/api/topics/${topicName}/links`, {
     method: 'POST',

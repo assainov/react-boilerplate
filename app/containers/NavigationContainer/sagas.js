@@ -4,11 +4,7 @@ import { call, put, select } from 'redux-saga/effects';
 import { requestTopicsSuccess, requestTopicsFailure } from './actions';
 import { push } from 'react-router-redux';
 import selectNavigationContainer from './selectors';
-
-export function fetchTopicsFromServer() {
-  return fetch('/api/topics')
-    .then(result => result.json());
-}
+import { fetchTopicsFromServer } from '../../api';
 
 function* fetchTopics() {
   try {
