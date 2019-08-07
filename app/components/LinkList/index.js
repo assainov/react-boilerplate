@@ -11,9 +11,9 @@ import styles from './styles.css';
 import Link from '../Link';
 import IconButton from '../IconButton';
 
-function LinkList({ links, topicName, children, startAdd }) {
+function LinkList({ links, topicName, children, startAdd, upvoteLink }) {
   const linkNodes = links.map(l => (
-    <Link key={l.id} link={l} />
+    <Link key={l.id} link={l} upvoteLink={(linkId) => upvoteLink(linkId)} />
   ));
   return (
     <div className={styles.linkList}>
@@ -41,6 +41,7 @@ LinkList.propTypes = {
   topicName: React.PropTypes.string.isRequired,
   children: React.PropTypes.element,
   startAdd: React.PropTypes.func.isRequired,
+  upvoteLink: React.PropTypes.func.isRequired,
 };
 
 export default LinkList;

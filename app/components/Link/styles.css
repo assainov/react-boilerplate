@@ -30,8 +30,18 @@
     color: #757575;
 }
 
+.voting-button {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    cursor: initial !important;
+}
+
 .voting-icon {
-    font-size: 4rem;
+    cursor: pointer;
+    transform: rotate(-90deg);
+    font-size: 2rem;
 }
 
 .link-anchor {

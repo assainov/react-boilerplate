@@ -17,3 +17,14 @@ export function createLink({ topicName, url, description }) {
 export function fetchLinksFromServer(topicName) {
   return fetch(`/api/topics/${topicName}/links`).then(response => response.json());
 }
+
+export function upvoteLinkOnServer(linkId) {
+  return fetch(`/api/links/${linkId}/vote`, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ increment: 1, email: '123@gmail.com' }),
+  }).then(response => response.json());
+}

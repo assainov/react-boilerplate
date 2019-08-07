@@ -8,8 +8,9 @@ import React from 'react';
 
 
 import styles from './styles.css';
+import IconButton from '../IconButton';
 
-function Link({ link }) {
+function Link({ link, upvoteLink }) {
   return (
     <div className={styles.link}>
       <div className={styles.votingContainer}>
@@ -27,6 +28,12 @@ function Link({ link }) {
           {link.description}
         </div>
       </div>
+      <IconButton
+        htmlCode="&#10095;"
+        buttonClass={styles.votingButton}
+        iconClass={styles.votingIcon}
+        onClick={() => upvoteLink(link.id)}
+      />
     </div>
   );
 }
@@ -38,6 +45,7 @@ Link.propTypes = {
     url: React.PropTypes.string.isRequired,
     id: React.PropTypes.string.isRequired,
   }),
+  upvoteLink: React.PropTypes.func.isRequired,
 };
 
 export default Link;
