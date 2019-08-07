@@ -15,7 +15,7 @@ function AppBar({ toggleDrawer, email }) {
   return (
     <div className={styles.appBar}>
       <IconButton
-        icon="bars"
+        htmlCode="&#9776;"
         buttonClass={styles.iconButton}
         iconClass={styles.icon}
         onClick={toggleDrawer}

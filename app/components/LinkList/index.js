@@ -20,7 +20,7 @@ function LinkList({ links, topicName, children, startAdd }) {
       <div className={styles.controlsBar}>
         <h1>{topicName}</h1>
         <IconButton
-          icon="plus"
+          htmlCode="&#43;"
           buttonClass={styles.button}
           iconClass={styles.icon}
           onClick={() => startAdd(topicName)}

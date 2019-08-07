@@ -5,28 +5,26 @@
 */
 
 import React from 'react';
-import FontAwesome from 'react-fontawesome';
 import classNames from 'classnames';
 
 
 import styles from './styles.css';
 
-function IconButton({ onClick, icon, iconClass, buttonClass }) {
+function IconButton({ onClick, htmlCode, iconClass, buttonClass }) {
   return (
     <div
       className={classNames(styles.iconButton, buttonClass)}
       onClick={onClick}
     >
-      <FontAwesome
+      <div
         className={iconClass}
-        name={icon}
-      />
+      >{htmlCode}</div>
     </div>
   );
 }
 
 IconButton.propTypes = {
-  icon: React.PropTypes.string.isRequired,
+  htmlCode: React.PropTypes.string.isRequired,
   iconClass: React.PropTypes.string,
   buttonClass: React.PropTypes.string,
   onClick: React.PropTypes.func.isRequired,
